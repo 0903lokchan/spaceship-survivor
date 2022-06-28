@@ -71,7 +71,7 @@
     {
       "label": "Build model",
       "type": "shell",
-      "command": "cd model_builder && python create_model.py"
+      "command": "cd model_builder && python build.py"
     }
   ]
 }
