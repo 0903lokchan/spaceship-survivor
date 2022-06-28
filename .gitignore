@@ -24,8 +24,11 @@ yarn-error.log*
 /publish
 **/build
 
-#python cache
+# python cache
 **/__pycache__
 
 # dependencies
 **/node_modules
+
+# undeployed models
+model_builder/model
