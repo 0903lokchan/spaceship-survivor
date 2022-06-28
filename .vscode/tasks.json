@@ -16,6 +16,12 @@
       "args": ["install", "-r", "backend/requirements.txt"]
     },
     {
+      "label": "Install dependencies model_builder",
+      "type": "shell",
+      "command": "pip",
+      "args": ["install", "-r", "model_builder/requirements.txt"]
+    },
+    {
       "label": "Publish frontend",
       "type": "npm",
       "script": "publish",
@@ -43,7 +49,8 @@
       "dependsOrder": "sequence",
       "dependsOn": [
         "Install dependencies frontend",
-        "Install dependencies backend"
+        "Install dependencies backend",
+        "Install dependencies model_builder"
       ]
     },
     {
@@ -60,6 +67,11 @@
         "Start backend",
         "Start frontend"
       ]
+    },
+    {
+      "label": "Build model",
+      "type": "shell",
+      "command": "cd model_builder && python build.py"
     }
   ]
 }
